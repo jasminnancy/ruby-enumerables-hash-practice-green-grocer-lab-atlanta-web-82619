@@ -15,8 +15,8 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-   # code here		   coupons.each {|coupon|
- end		     if cart[coupon[:item]] and (cart[coupon[:item]][:count] >= coupon[:num])
+coupons.each {|coupon|
+if cart[coupon[:item]] and (cart[coupon[:item]][:count] >= coupon[:num])
          if cart["#{coupon[:item]} W/COUPON"] 
            cart["#{coupon[:item]} W/COUPON"][:count] += coupon[:num]
          else
