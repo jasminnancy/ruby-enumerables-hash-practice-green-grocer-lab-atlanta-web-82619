@@ -1,6 +1,5 @@
 def consolidate_cart(cart)
   cart_hash = {}
-  
   cart.each do |item|
     item.each do |key, value|
       if cart_hash[key]
@@ -32,12 +31,10 @@ def apply_coupons(cart, coupons)
   return cart
 end 
 
-
-
-
-
 def apply_clearance(cart)
-  # code here
+  cart.each do |sale|
+    
+  end
 end
 
 def checkout(cart, coupons)
